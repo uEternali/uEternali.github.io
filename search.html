@@ -1,0 +1,48 @@
+---
+layout: default
+title: 搜索
+page-title: Search
+home-title: Search the things you want.
+description:
+---
+
+{% include header.html %}
+{% include boot.html %}
+<main>
+    {% include title.html %}
+      <ul style="text-align: center;">
+        <li class="fadeInUp animated">
+          <div id="search-container"
+                style="height: 50px; padding-top: 0px; width: 600px;margin-left:auto; margin-right: auto; margin-top: -70px;">
+                <input type="text" id="search-input" placeholder="searching"
+                    style="border:2px solid;border-radius:20px;text-align:center;width: 600px;height: 24px;font-size: 17px;outline:none;">    
+          </div>
+          <div id="results-container"></div>
+          <div style="height: 110px; padding-top: 0px; width: 600px; margin-left:auto; margin-right: auto; margin-top: auto;"></div>
+          </li>
+      </ul>
+        
+        
+</main>
+
+{% include footer.html %}
+
+<!-- script pointing to jekyll-search.js-->
+<script src="{{ site.baseurl }}/js/simple-jekyll-search.min.js"></script>
+    <script>
+      window.simpleJekyllSearch = new SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ site.baseurl }}/search.json',
+        searchResultTemplate: '\
+        <ul class="search-list">\
+          <li class="fadeInUp animated"> \
+            <a class="search-post" href="{url}?query={query}">{title}</a> \
+          </li> \
+        </ul>\
+        ',
+        noResultsText: 'No results found',
+        fuzzy: false,
+        exclude: ['Welcome'],
+      })
+    </script>
