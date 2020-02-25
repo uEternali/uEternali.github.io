@@ -15,7 +15,7 @@ description:
           <div id="search-container"
                 style="height: 50px; padding-top: 0px; width: 600px;margin-left:auto; margin-right: auto; margin-top: -70px;">
                 <input type="text" id="search-input" placeholder="searching"
-                    style="border:2px solid;border-radius:20px;text-align:center;width: 600px;height: 24px;font-size: 17px;outline:none;">    
+                    style="border:1.5px solid;border-radius:20px;text-align:center;width: 600px;height: 24px;font-size: 17px;outline:none;">    
           </div>
           <div id="results-container"></div>
           <div style="height: 110px; padding-top: 0px; width: 600px; margin-left:auto; margin-right: auto; margin-top: auto;"></div>
@@ -41,7 +41,12 @@ description:
           </li> \
         </ul>\
         ',
-        noResultsText: 'No results found',
+        noResultsText: '\
+         <ul class="search-list">\
+          <li class="fadeInUp animated"> \
+            <p style="font-size: 20px;">No results found</p>\
+            </li> \
+        </ul>',
         fuzzy: false,
         exclude: ['Welcome'],
       })
