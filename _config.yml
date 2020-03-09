@@ -2,7 +2,7 @@
 title: 'uEternali Blog'
 description: 'Recoding and Sharing'
 keywords: 'uEternali, Blog'
-url: 'http://localhost:4000' # your host
+url: 'https://ueternali.github.io/' # your host
 
 # nav 中文字符空格：&emsp;
 nav: # 最佳体验 六个标签 且最好每个标签不超过4中文字
